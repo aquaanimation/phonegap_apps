@@ -44,13 +44,64 @@
                     <input type="radio" name="iCheck">
                     <input type="radio" name="iCheck" checked>
                 </div>
-            </div>
+                <div class='button red center'>Red / Light</div>
 
+            </div>
+            <div id="add-feed-page" data-role="page" data-title="Add Feed">
+                <header data-role="header">
+                    <a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
+                    <h1>Add Feed</h1>
+                </header>
+                <div data-role="content">
+                    <p>
+                        Use this form to add a new feed Feed. It's easy as writing a name, the URL and then click "Add Feed".
+                    </p>
+                    <form id="add-feed-form" name="add-feed-form" action="index.html">
+                        <div data-role="fieldcontain">
+                            <label for="feed-name">Feed Name:</label>
+                            <input type="text" id="feed-name" name="feed-name" required="required"/>
+                        </div>
+                        <div data-role="fieldcontain">
+                            <label for="feed-url">Feed URL:</label>
+                            <input type="url" id="feed-url" name="feed-url" required="required"/>
+                        </div>
+                        <input type="submit" value="Add Feed" />
+                    </form>
+                </div>
+            </div>
+            <div id="list-feeds-page" data-role="page" data-title="List Feeds">
+                <header data-role="header">
+                    <a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
+                    <h1>List Feeds</h1>
+                </header>
+                <div data-role="content">
+                    <ul id="feeds-list" data-role="listview" data-filter="true">
+                    </ul>
+                </div>
+            </div>
+            <div id="show-feed-page" data-role="page" data-title="Show Feed">
+                <header data-role="header">
+                    <a href="#" data-icon="back" data-iconpos="notext" data-rel="back" title="Go back">Back</a>
+                    <h1>Show Feed</h1>
+                    <div data-role="navbar" class="ui-body-b">
+                        <ul>
+                            <li><a id="show-more-entries" href="#" data-icon="refresh" data-iconpos="left">Show more</a></li>
+                            <li><a id="delete-feed" href="#" data-icon="delete" data-iconpos="left">Delete Feed</a></li>
+                        </ul>
+                    </div>
+                </header>
+                <div data-role="content">
+                    <div id="feed-entries" data-role="collapsible-set">
+                    </div>
+                </div>
+            </div>
         </div>
         <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/feed.js"></script>
+        <script type="text/javascript" src="js/application.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/icheck.min.js"></script>
+
         <script type="text/javascript">
             app.initialize();
         </script>

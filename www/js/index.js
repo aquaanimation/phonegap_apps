@@ -67,3 +67,6 @@ $(document).ready(function(){
         });
     });
 });
+$(document)
+    .on('pagebeforecreate', Application.updateIcons)
+    .one('deviceready', Application.initApplication);
