@@ -27,6 +27,7 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link href="css/square/red.css" rel="stylesheet">
         <title>jinnyous</title>
     </head>
     <body>
@@ -36,9 +37,20 @@
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
             </div>
+            <div class="wrapper_for_elements">
+                <div class="elements_for_app">
+                    <input type="checkbox">
+                    <input type="checkbox" checked>
+                    <input type="radio" name="iCheck">
+                    <input type="radio" name="iCheck" checked>
+                </div>
+            </div>
+
         </div>
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/icheck.min.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>

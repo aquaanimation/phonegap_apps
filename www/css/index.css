@@ -51,6 +51,15 @@ body {
     padding:0px;
     width:100%;
 }
+.wrapper_for_elements{
+    width:100%;
+    display: block;
+    padding: 2em;
+
+
+}
+
+
 
 /* Portrait layout (default) */
 .app {

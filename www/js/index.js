@@ -47,3 +47,23 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+/*$(window).load(function() {
+    $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 210,
+        itemMargin: 5,
+        minItems: 2,
+        maxItems: 4
+    });
+});*/
+
+$(document).ready(function(){
+    $(document).ready(function(){
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-red',
+            radioClass: 'iradio_square-red',
+            increaseArea: '20%' // optional
+        });
+    });
+});
