@@ -4,8 +4,8 @@
     <description>
         Jinnyous is a mobile application that responds to the wikipedia API.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="aquaanimation@gmail.com" href="http://www.aqualtd.gr">
+        Alexandros Georgakkakis Giakoump
     </author>
     <content src="index.html" />
 	<preference name="phonegap-version" value="3.7.0" />
