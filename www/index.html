@@ -26,12 +26,55 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link href="css/square/red.css" rel="stylesheet">
+        <link href="css/jquery-ui.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>jinnyous</title>
     </head>
     <body>
-        <div class="app">
+
+    <nav id="top_navigation_menu">
+        <div class="top_search">
+            <input id="jinny_search" type="text" placeholder="What comes to your mind?">
+        </div>
+    </nav>
+
+    <div id="rss_feed_container">
+        <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+            <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+                <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="tabs-1" aria-labelledby="ui-id-8" aria-selected="true" aria-expanded="true"><a href="#tabs-1" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-8">First</a></li>
+                <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-2" aria-labelledby="ui-id-9" aria-selected="false" aria-expanded="false"><a href="#tabs-2" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-9">Second</a></li>
+                <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-3" aria-labelledby="ui-id-10" aria-selected="false" aria-expanded="false"><a href="#tabs-3" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-10">Third</a></li>
+            </ul>
+            <div id="tabs-1" aria-labelledby="ui-id-8" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="false" style="display: block;">
+                <div id="accordion">
+                    <h3>First</h3>
+                    <div class="post_list">
+                        <div class="post_results" id="post_results1" rss_num="5" rss_url="http://www.capital.gr/api/tags/allfeed">
+                            <div class="loading_rss">
+                                <!--<img alt="Loading..." src="images/loading.gif" />-->
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Second</h3>
+                    <div class="post_results" id="post_results2" rss_num="5" rss_url="http://www.shape.gr/feed/">
+                        <div class="loading_rss">
+                            <!--<img alt="Loading..." src="images/loading.gif" />-->
+                        </div>
+                    </div>
+                    <h3>Third</h3>
+                    <div>Nam dui erat, auctor a, dignissim quis.</div>
+                </div>
+            </div>
+            <div id="tabs-2" aria-labelledby="ui-id-9" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
+            <div id="tabs-3" aria-labelledby="ui-id-10" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-hidden="true" style="display: none;">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+        </div>
+
+
+    </div>
+    <div class="main_container_">
+        <h1>test my app</h1>
+        <div class="app" id="app_logo">
             <h1 class="logo">jinnyous</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
@@ -45,64 +88,14 @@
                     <input type="radio" name="iCheck" checked>
                 </div>
                 <div class='button red center'>Red / Light</div>
-
-            </div>
-            <div id="add-feed-page" data-role="page" data-title="Add Feed">
-                <header data-role="header">
-                    <a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
-                    <h1>Add Feed</h1>
-                </header>
-                <div data-role="content">
-                    <p>
-                        Use this form to add a new feed Feed. It's easy as writing a name, the URL and then click "Add Feed".
-                    </p>
-                    <form id="add-feed-form" name="add-feed-form" action="index.html">
-                        <div data-role="fieldcontain">
-                            <label for="feed-name">Feed Name:</label>
-                            <input type="text" id="feed-name" name="feed-name" required="required"/>
-                        </div>
-                        <div data-role="fieldcontain">
-                            <label for="feed-url">Feed URL:</label>
-                            <input type="url" id="feed-url" name="feed-url" required="required"/>
-                        </div>
-                        <input type="submit" value="Add Feed" />
-                    </form>
-                </div>
-            </div>
-            <div id="list-feeds-page" data-role="page" data-title="List Feeds">
-                <header data-role="header">
-                    <a href="index.html" data-icon="home" data-iconpos="notext">Home</a>
-                    <h1>List Feeds</h1>
-                </header>
-                <div data-role="content">
-                    <ul id="feeds-list" data-role="listview" data-filter="true">
-                    </ul>
-                </div>
-            </div>
-            <div id="show-feed-page" data-role="page" data-title="Show Feed">
-                <header data-role="header">
-                    <a href="#" data-icon="back" data-iconpos="notext" data-rel="back" title="Go back">Back</a>
-                    <h1>Show Feed</h1>
-                    <div data-role="navbar" class="ui-body-b">
-                        <ul>
-                            <li><a id="show-more-entries" href="#" data-icon="refresh" data-iconpos="left">Show more</a></li>
-                            <li><a id="delete-feed" href="#" data-icon="delete" data-iconpos="left">Delete Feed</a></li>
-                        </ul>
-                    </div>
-                </header>
-                <div data-role="content">
-                    <div id="feed-entries" data-role="collapsible-set">
-                    </div>
-                </div>
             </div>
         </div>
+    </div>
         <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/feed.js"></script>
-        <script type="text/javascript" src="js/application.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/icheck.min.js"></script>
-
+        <script type="text/javascript" src="cordova.js"></script>
+        <!--<script src="https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22nome%2C%20ak%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"></script>-->
         <script type="text/javascript">
             app.initialize();
         </script>

@@ -18,6 +18,7 @@
  */
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    outline: none;
 }
 @font-face {
     font-family: 'Roboto';
@@ -51,13 +52,6 @@ body {
     padding:0px;
     width:100%;
 }
-.wrapper_for_elements{
-    width:100%;
-    display: block;
-    padding: 2em;
-
-
-}
 
 .button {
     border: 0 none;
@@ -89,20 +83,106 @@ body {
     background: none repeat scroll 0 0 #999999;
     color: #FFFFFF;
 }
+.top_search {
+    width: 100%;
+}
+
+.top_search input[type="text"] {
+    padding: 1%;
+    border: none;
+    border-bottom: solid 2px #c9c9c9;
+    font-size: 1rem;
+    transition: border 0.3s;
+    width: 98%;
+    font-family: 'Roboto';
+    outline: none;
+}
+.top_search input[type="text"]:focus,
+.top_search input[type="text"].focus {
+    border-bottom: solid 2px #969696;
+}
+.main_container_ {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 68%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper_for_elements{
+    width:100%;
+    display: block;
+    padding: 2em;
+  
+
+}
+#rss_feed_container{
+    width:30%;
+    max-width: 350px;
+    box-shadow: 0 0 20px #ccc;
+    background: rgba(255,255,255,0.8);
+    overflow: auto;
+    display: inline-block;
+}
+
+.ui-accordion .ui-accordion-icons {
+    font-size: 1.2em;
+    background-color: #6d6571;
+    color: #fff;
+    padding-left: 1.2em;
+}
+.ui-accordion .ui-accordion-content {
+    padding: 0;
+}
+
+.highlight { background-color: #f1c40f }
+
+/*Capital CSS*/
+
+
+.post_results li {
+    padding: 0.1em 1em;
+}
+
+.post_results li p {
+    font-size: 0.7em;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.3em;
+    color: #666;
+}
+.post_results a {
+    text-decoration: none;
+    color: #3c618b;
+    border-bottom: 1px dotted #3c618b;
+    display: block;
+    padding: 0.5em 0;
+}
 
 
 /* Portrait layout (default) */
+
+
 .app {
     background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
     position:absolute;             /* position in the center of the screen */
     left:50%;
-    top:50%;
     height:50px;                   /* text area height */
     width:225px;                   /* text area width */
     text-align:center;
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
+}
+
+
+.post_results ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.2rem;
 }
 
 /* Landscape layout (with min-width) */
