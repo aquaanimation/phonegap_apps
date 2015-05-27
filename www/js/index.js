@@ -216,6 +216,12 @@ var rssReader = {
 
 window.onload = function() {
     rssReader.init('post_results');
+    $( ".draggable_element" ).draggable({
+        appendTo: 'body',
+        containment: 'window',
+        scroll: false,
+        helper: 'clone'
+    });
 }
 
 
@@ -237,8 +243,17 @@ $(document).ready(function(){
     $('#app_logo').css('top',windowheight/2);
     $( "#tabs" ).tabs();
     $('#accordion').accordion({heightStyle: 'panel'});
-    $( '.draggable_element' ).draggable();
 
 });
 
 
+$(function() {
+    $( ".draggable_element" ).draggable({
+        appendTo: 'body',
+        containment: 'window',
+        scroll: false,
+        helper: 'clone'
+    });
+    $( document ).tooltip();
+
+});
