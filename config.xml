@@ -2,7 +2,8 @@
 <widget id="Wind_Runner" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Jinnyous</name>
     <description>
-        Jinnyous is a mobile application that responds to the wikipedia API.
+        Jinnyous is a all-in-one opensource mobile application. It's highly dependent on the UX and should be used as a single app for anything a user wants. Social integration, news, as a mail client banking transactions and more.
+        We hope that you can add anything you thing hsould be usefull.
     </description>
     <author email="aquaanimation@gmail.com" href="http://www.aqualtd.gr">
         Alexandros Georgakkakis Giakoump
