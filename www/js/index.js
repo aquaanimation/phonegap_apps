@@ -257,3 +257,4 @@ $(function() {
     $( document ).tooltip();
 
 });
+$('body').highlight('ο')
