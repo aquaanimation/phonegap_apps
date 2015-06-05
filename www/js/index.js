@@ -231,6 +231,7 @@ $(document).ready(function(){
             radioClass: 'iradio_square-red',
             increaseArea: '20%' // optional
         });
+
     var windowheight= $(window).height();
     var navheight = $('#top_navigation_menu').height();
     $('#rss_feed_container').css('height', windowheight - navheight);
